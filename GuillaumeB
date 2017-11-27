@@ -1,0 +1,40 @@
+<?php include("status.php"); include("config.php"); ?>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        	<meta charset="UTF-8">
+		<meta name="author" content="Guillaume">
+        	<title><?= $title; ?></title>
+		<link href="css/style.css" rel="stylesheet">
+		<style>
+			body {
+				background-image: url(<?= $background_image; ?>);
+				background-color: <?= $background_color; ?>;
+			}
+			header {
+				background-color: <?= $header_color; ?>;
+			}
+			.img_edit{
+				border-width:0; 
+				vertical-align:middle;
+			}
+		</style>
+		<meta http-equiv="refresh" content="<?= $auto_refresh; ?>">
+   	</head>
+	<body>
+		<header>
+			<img src="<?= $logo; ?>"/>
+		</header>
+		<article>
+			<table>
+				<?= status(); ?>
+			</table>
+			<h6>
+				<?php echo "Last update the "; echo date("d/m/Y"); echo " at "; echo date("H:i:s"); ?>
+			</h6>
+		</article>
+		<footer>
+			Created by <a href="https://github.com/Mumdi">Guillaume</a> - <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="img_edit" alt="Licence Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a>
+		</fotter>
+	</body>
+</html>
